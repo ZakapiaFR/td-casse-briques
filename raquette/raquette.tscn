@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://jgotnhfyn8vb"]
+
+[ext_resource type="Texture2D" uid="uid://gjckobc4je17" path="res://raquette/skin_raquette_a.tres" id="1_w6mu3"]
+
+[node name="Raquette" type="CharacterBody2D" unique_id=1454305682]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1715594717]
+position = Vector2(416, 296)
+texture = ExtResource("1_w6mu3")
