@@ -1,30 +1,36 @@
 extends Node
 
-# Variable exportée pour la vitesse de déplacement de la raquette
-@export var vitesse: float = 300.0
+# Vitesse
+@export var vitesse: float = 400
 
-# Référence au nœud parent (la raquette)
-@onready var raquette: Node2D = get_parent()
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
 
-func _physics_process(delta: float) -> void:
-	# Récupérer l'entrée horizontale en utilisant les inputs personnalisés
-	var direction: float = Input.get_action_strength("p1_right") - Input.get_action_strength("p1_left")
 
-	# Calculer le déplacement
-	var deplacement: Vector2 = Vector2(direction * vitesse * delta, 0)
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
 
-	# Appliquer le déplacement au nœud parent (la raquette)
-	raquette.position += deplacement
-	
-	# Récupérer la taille du visuel (Sprite2D)
-	var sprite: Sprite2D = raquette.get_child(0) as Sprite2D
-	var taille_raquette: float = sprite.texture.get_size().x
 
-	# Empêcher la raquette de sortir de l'écran
-	var limite_gauche: float = 0 + (taille_raquette )
-	var limite_droite: float = get_viewport().get_visible_rect().size.x - (taille_raquette )
+func _physics_process(delta):
+	var direction = 0
 
-	if raquette.position.x < limite_gauche:
-		raquette.position.x = limite_gauche
-	elif raquette.position.x > limite_droite:
-		raquette.position.x = limite_droite
+# Inputs
+	if Input.is_action_pressed("p1_left"):
+		direction = -1
+	elif Input.is_action_pressed("p1_right"):
+		direction = 1
+
+	# Déplacement
+	var mouvement = direction * vitesse * delta
+	var parent = get_parent()
+
+	parent.position.x += mouvement
+
+	# Limite de la map
+	var screen_size = get_viewport().get_visible_rect().size
+	var min_x = screen_size.x * 0.05
+	var max_x = screen_size.x * 0.95
+
+	parent.position.x = clamp(parent.position.x, min_x, max_x)

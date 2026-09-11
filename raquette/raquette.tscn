@@ -9,5 +9,5 @@
 position = Vector2(576, 600)
 texture = ExtResource("1_w6mu3")
 
-[node name="Control Joueur" type="Node" parent="." unique_id=1217424160]
+[node name="control_joueur" type="Node" parent="." unique_id=1217424160]
 script = ExtResource("2_8wwvb")

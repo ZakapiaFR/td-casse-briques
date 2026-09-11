@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhrjgdodtih1a"]
 
 [ext_resource type="PackedScene" uid="uid://jgotnhfyn8vb" path="res://raquette/raquette.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dgcacdy3ysb87" path="res://raquette/control_joueur.gd" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=10791390]
 
@@ -12,3 +13,6 @@ offset_bottom = 327.0
 text = "Hello"
 
 [node name="Raquette" parent="." unique_id=1454305682 instance=ExtResource("1_ig7tw")]
+
+[node name="Control Joueur" type="Node" parent="Raquette" unique_id=1614298540]
+script = ExtResource("2_0xm2m")
