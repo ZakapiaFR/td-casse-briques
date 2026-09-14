@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://behs78k3nbw8i"
+path="res://.godot/imported/sfx_sounds_fanfare3.wav-4dece24a3d679872431374f62fbd6dae.sample"
+
+[deps]
+
+source_file="res://media/audio/General Sounds/Fanfares/sfx_sounds_fanfare3.wav"
+dest_files=["res://.godot/imported/sfx_sounds_fanfare3.wav-4dece24a3d679872431374f62fbd6dae.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

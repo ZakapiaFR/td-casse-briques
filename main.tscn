@@ -1,18 +1,47 @@
-[gd_scene format=3 uid="uid://dhrjgdodtih1a"]
+[gd_scene format=3 uid="uid://do5gsbjv7ugl7"]
 
-[ext_resource type="PackedScene" uid="uid://jgotnhfyn8vb" path="res://raquette/raquette.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://dgcacdy3ysb87" path="res://raquette/control_joueur.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b8gdrejq8m5an" path="res://Raquette/raquette.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://doly0dqt6wqgw" path="res://Raquette/control_joueur.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://b0bhl3hf4gkmq" path="res://Raquette/gravity.gd" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bnaomqh00s8iy" path="res://Balle/rigid_body_2d.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://dwsqnfdbpqpfj" path="res://ball_behavior.gd" id="5_lquwl"]
 
-[node name="Node2D" type="Node2D" unique_id=10791390]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 
-[node name="Label" type="Label" parent="." unique_id=1221236452]
-offset_left = 552.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1bvp3"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
+radius = 8.0
+
+[node name="Node2D" type="Node2D" unique_id=352613472]
+
+[node name="Label" type="Label" parent="." unique_id=722440824]
+offset_left = 464.0
 offset_top = 304.0
-offset_right = 592.0
-offset_bottom = 327.0
-text = "Hello"
+offset_right = 559.0
+offset_bottom = 336.0
+text = "GIVE ME SOME MONEY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Raquette" parent="." unique_id=1454305682 instance=ExtResource("1_ig7tw")]
+[node name="Raquette" parent="." unique_id=789775279 instance=ExtResource("1_ig7tw")]
+position = Vector2(512, 632)
+script = ExtResource("2_1bvp3")
 
-[node name="Control Joueur" type="Node" parent="Raquette" unique_id=1614298540]
+[node name="Control Joueur" type="Node" parent="Raquette" unique_id=2120104775]
 script = ExtResource("2_0xm2m")
+
+[node name="hitboxRaquette" type="CollisionShape2D" parent="Raquette" unique_id=1098963760]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Balle" parent="." unique_id=1534682789 instance=ExtResource("3_h2yge")]
+position = Vector2(512, 448)
+physics_material_override = SubResource("PhysicsMaterial_1bvp3")
+
+[node name="Ball Behavior" type="Node" parent="Balle" unique_id=509111526]
+script = ExtResource("5_lquwl")
+
+[node name="hitboxBall" type="CollisionShape2D" parent="Balle" unique_id=841636996]
+shape = SubResource("CircleShape2D_1bvp3")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bbhe5ligtnuul"
+path="res://.godot/imported/sfx_wpn_reload.wav-36f1155ba79b6f4bc1312d8818979617.sample"
+
+[deps]
+
+source_file="res://media/audio/Weapons/Out of Ammo/sfx_wpn_reload.wav"
+dest_files=["res://.godot/imported/sfx_wpn_reload.wav-36f1155ba79b6f4bc1312d8818979617.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

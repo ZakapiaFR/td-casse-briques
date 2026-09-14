@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhl2oyicvr8v6"
+path="res://.godot/imported/sfx_sound_noise.wav-9818b239315d7ece33f0d56a7c9b9bcf.sample"
+
+[deps]
+
+source_file="res://media/audio/General Sounds/Weird Sounds/sfx_sound_noise.wav"
+dest_files=["res://.godot/imported/sfx_sound_noise.wav-9818b239315d7ece33f0d56a7c9b9bcf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

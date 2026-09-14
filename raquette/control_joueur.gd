@@ -16,10 +16,10 @@ func _process(delta: float) -> void:
 func _physics_process(delta):
 	var direction = 0
 
-# Inputs
-	if Input.is_action_pressed("p1_left"):
+	# Inputs
+	if Input.is_action_pressed("P1_left"):
 		direction = -1
-	elif Input.is_action_pressed("p1_right"):
+	elif Input.is_action_pressed("P1_right"):
 		direction = 1
 
 	# Déplacement
@@ -27,7 +27,7 @@ func _physics_process(delta):
 	var parent = get_parent()
 
 	parent.position.x += mouvement
-
+	
 	# Limite de la map
 	var screen_size = get_viewport().get_visible_rect().size
 	var min_x = screen_size.x * 0.05

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://tchrkjhdunt4"
+path="res://.godot/imported/sfx_menu_move1.wav-b95fe554cb2d2400516ffd7ea9728d4b.sample"
+
+[deps]
+
+source_file="res://media/audio/General Sounds/Menu Sounds/sfx_menu_move1.wav"
+dest_files=["res://.godot/imported/sfx_menu_move1.wav-b95fe554cb2d2400516ffd7ea9728d4b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

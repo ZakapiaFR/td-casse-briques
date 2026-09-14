@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bnaomqh00s8iy"]
+
+[ext_resource type="Texture2D" uid="uid://dx2ej6nfy5j2f" path="res://Balle/skin_balle.tres" id="1_i73h0"]
+
+[node name="Balle" type="RigidBody2D" unique_id=1534682789]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=726220547]
+texture = ExtResource("1_i73h0")

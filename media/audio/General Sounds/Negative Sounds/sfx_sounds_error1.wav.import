@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ym4nya1pppgb"
+path="res://.godot/imported/sfx_sounds_error1.wav-67f04062cf1b7a51068598ea39712238.sample"
+
+[deps]
+
+source_file="res://media/audio/General Sounds/Negative Sounds/sfx_sounds_error1.wav"
+dest_files=["res://.godot/imported/sfx_sounds_error1.wav-67f04062cf1b7a51068598ea39712238.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
