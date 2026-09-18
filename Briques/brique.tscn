@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cbjeppykaq3t"]
+
+[ext_resource type="Texture2D" uid="uid://c3831rkxuushl" path="res://media/assets/more_breakout_pieces.png" id="1_rbi10"]
+[ext_resource type="Script" uid="uid://cp17er7gh0efd" path="res://Briques/brique.gd" id="1_vqtvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tcuh"]
+size = Vector2(80, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vr5u"]
+atlas = ExtResource("1_rbi10")
+region = Rect2(1056.4089, 32.19434, 79.47803, 14.281189)
+
+[node name="Brique" type="StaticBody2D" unique_id=2047454635 groups=["briques"]]
+script = ExtResource("1_vqtvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531228394]
+shape = SubResource("RectangleShape2D_8tcuh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=689439263]
+texture = SubResource("AtlasTexture_1vr5u")

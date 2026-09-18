@@ -1,2 +1,1 @@
-# td-casse-briques
-
+# Default readme

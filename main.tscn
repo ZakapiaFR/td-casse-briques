@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://do5gsbjv7ugl7"]
 
 [ext_resource type="PackedScene" uid="uid://b8gdrejq8m5an" path="res://Raquette/raquette.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://doly0dqt6wqgw" path="res://Raquette/control_joueur.gd" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://b0bhl3hf4gkmq" path="res://Raquette/gravity.gd" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://c40k72votweg2" path="res://Raquette/raquette.gd" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bnaomqh00s8iy" path="res://Balle/rigid_body_2d.tscn" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://dwsqnfdbpqpfj" path="res://ball_behavior.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cbjeppykaq3t" path="res://Briques/brique.tscn" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://dwsqnfdbpqpfj" path="res://Balle/ball_behavior.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://csv5vi0gj71q4" path="res://Briques/brique_behavior.gd" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(80, 13)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1bvp3"]
 friction = 0.0
@@ -15,29 +17,39 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
 radius = 8.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(20, 665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(18, 666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vw27"]
+size = Vector2(1170, 20)
+
 [node name="Node2D" type="Node2D" unique_id=352613472]
 
 [node name="Label" type="Label" parent="." unique_id=722440824]
-offset_left = 464.0
+offset_left = 528.0
 offset_top = 304.0
-offset_right = 559.0
+offset_right = 623.0
 offset_bottom = 336.0
-text = "GIVE ME SOME MONEY"
+text = "GIVE ME SOME MONEY !"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Raquette" parent="." unique_id=789775279 instance=ExtResource("1_ig7tw")]
-position = Vector2(512, 632)
+position = Vector2(576, 608)
+floor_block_on_wall = false
 script = ExtResource("2_1bvp3")
 
 [node name="Control Joueur" type="Node" parent="Raquette" unique_id=2120104775]
-script = ExtResource("2_0xm2m")
 
 [node name="hitboxRaquette" type="CollisionShape2D" parent="Raquette" unique_id=1098963760]
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="Balle" parent="." unique_id=1534682789 instance=ExtResource("3_h2yge")]
-position = Vector2(512, 448)
+position = Vector2(576, 448)
 physics_material_override = SubResource("PhysicsMaterial_1bvp3")
 
 [node name="Ball Behavior" type="Node" parent="Balle" unique_id=509111526]
@@ -45,3 +57,29 @@ script = ExtResource("5_lquwl")
 
 [node name="hitboxBall" type="CollisionShape2D" parent="Balle" unique_id=841636996]
 shape = SubResource("CircleShape2D_1bvp3")
+
+[node name="Briques" type="Node2D" parent="." unique_id=1502197397]
+script = ExtResource("6_7mycd")
+brique_scene = ExtResource("5_7mycd")
+
+[node name="Murs" type="Node2D" parent="." unique_id=1498126389]
+
+[node name="Mur gauche" type="StaticBody2D" parent="Murs" unique_id=2078780766]
+position = Vector2(104, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Murs/Mur gauche" unique_id=1524190739]
+position = Vector2(-104, 312)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="Mur droite" type="StaticBody2D" parent="Murs" unique_id=6223923]
+position = Vector2(1152, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Murs/Mur droite" unique_id=1291682697]
+position = Vector2(-1, 323)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Mur haut" type="StaticBody2D" parent="Murs" unique_id=1524045374]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Murs/Mur haut" unique_id=539024784]
+position = Vector2(575, 0)
+shape = SubResource("RectangleShape2D_5vw27")

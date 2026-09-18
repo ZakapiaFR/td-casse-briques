@@ -8,7 +8,7 @@ func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 	y_fixe = position.y
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("P1_left", "P1_right")
 	velocity.x = direction * vitesse
 	velocity.y = 0
