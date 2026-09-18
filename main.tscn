@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbjeppykaq3t" path="res://Briques/brique.tscn" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://dwsqnfdbpqpfj" path="res://Balle/ball_behavior.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://csv5vi0gj71q4" path="res://Briques/brique_behavior.gd" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://byxk3f7ei10y4" path="res://Fosse/GameOver.tscn" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(80, 13)
@@ -48,7 +49,7 @@ script = ExtResource("2_1bvp3")
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_1bvp3")
 
-[node name="Balle" parent="." unique_id=1534682789 instance=ExtResource("3_h2yge")]
+[node name="Balle" parent="." unique_id=1534682789 groups=["balle"] instance=ExtResource("3_h2yge")]
 position = Vector2(576, 448)
 physics_material_override = SubResource("PhysicsMaterial_1bvp3")
 
@@ -83,3 +84,5 @@ shape = SubResource("RectangleShape2D_272bh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Murs/Mur haut" unique_id=539024784]
 position = Vector2(575, 0)
 shape = SubResource("RectangleShape2D_5vw27")
+
+[node name="Fosse" parent="." unique_id=1763942181 instance=ExtResource("7_272bh")]

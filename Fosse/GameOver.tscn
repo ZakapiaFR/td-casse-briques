@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://byxk3f7ei10y4"]
+
+[ext_resource type="Script" uid="uid://4biu6ic2frr1" path="res://Fosse/fosse.gd" id="1_13m2d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13m2d"]
+size = Vector2(1173, 18)
+
+[node name="Fosse" type="Area2D" unique_id=1763942181]
+script = ExtResource("1_13m2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1210490486]
+position = Vector2(577.5, 648)
+shape = SubResource("RectangleShape2D_13m2d")
+
+[node name="Button" type="Button" parent="." unique_id=879314810]
+offset_left = 496.0
+offset_top = 280.0
+offset_right = 627.0
+offset_bottom = 331.0
+text = "Retry"

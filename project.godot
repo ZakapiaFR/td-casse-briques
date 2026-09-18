@@ -15,6 +15,11 @@ run/main_scene="uid://do5gsbjv7ugl7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
 [input]
 
 P1_left={
