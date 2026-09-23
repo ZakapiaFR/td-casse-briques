@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://b8gdrejq8m5an"]
-
-[ext_resource type="Texture2D" uid="uid://cby4cb1jp2170" path="res://Raquette/skin_raquette_a.tres" id="1_awm8m"]
-
-[node name="Raquette" type="CharacterBody2D" unique_id=789775279]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1552409125]
-texture = ExtResource("1_awm8m")
